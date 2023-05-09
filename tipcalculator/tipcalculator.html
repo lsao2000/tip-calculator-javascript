@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+    <title>Tip Calculator</title>
+    <style>
+        body{
+            margin: 0;
+            background: blueviolet;
+        }
+        .card{
+            border-radius: 10px;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+        }
+        #btnone,#btntwo{
+            /* margin-left: 4px; */
+            border: none;
+            background: transparent;
+            width: 30px;
+            height: 40px;
+            border-radius: 20px;
+            font-size: 30px;
+            display: flex;
+            margin-bottom: 5px;
+            
+        }
+        #btntwo{
+            margin-left: 4px;
+        }
+        #div1,#div2{
+            justify-content: center;
+            background: rgb(150, 144, 144);
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-left: 8px;
+            margin-top: 4px;
+            padding-bottom: 5px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+        #div1:hover,#div2:hover{
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="card mt-5 fw-bold w-50 mx-auto p-4 bg-dark text-light">
+        <div class="mt-5">
+            <label for="" class="mb-2">Bill total</label>
+            <input placeholder="$0.00" type="text" class="form-control" name="" id="billTotalInput">
+        </div>
+        <div class="mt-4">
+            <label for="Tip" class="mb-2">Tip</label>
+            <input type="text" placeholder="%10" name="" class="form-control"   id="tipInput">
+        </div>
+        <div class="mt-4 footer">
+            <div>
+                <p class="mb-2">Number of People</p>
+                <div class="d-flex"><div id="div1"><button id="btnone">+</button></div> <h1 id="numberOfPeople">1</h1><div id="div2"><button id="btntwo">-</button></div></div>
+            </div>
+            <div>
+                <p class="mb-2">Total per Person</p>
+                <h1 class="d-flex">$<div class="ms-3" id="perPersonTotal">0</div></h1>
+            </div>
+            
+        </div>
+    </div>
+    <script src="tipcalclator.js"></script>
+</body>
+</html>
